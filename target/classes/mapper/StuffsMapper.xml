@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.approving.system.dao.StuffMapper">
+
+<!--    <select id="getAllPhones" resultType="Phone">-->
+<!--        SELECT * FROM stuff-->
+<!--    </select>-->
+
+    <insert id="saveAllStuffs">
+        insert into tb_stuff (name,sex,college,department,title,academic,password,phone_num)
+        values
+        <foreach collection="list" separator="," item="stuff">
+            (#{stuff.name},#{stuff.sex},#{stuff.college},#{stuff.department},#{stuff.title},#{stuff.academic},#{stuff.password},#{stuff.phoneNum})
+        </foreach>
+    </insert>
+
+</mapper>

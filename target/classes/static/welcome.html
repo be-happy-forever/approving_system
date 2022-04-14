@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            欢迎界面
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="css/main.css" media="all">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" media="all">
+        <link rel="stylesheet" href="lib/bootstrap/js/bootstrap.min.js" media="all">
+    </head>
+    <body>
+    <style type="text/css">
+	legend { display: block; width:100px; border-bottom:0px; font-family: "Microsoft YaHei","Helvetica Neue";}
+	legend a{ color:#666;} legend a:hover{ text-decoration:none;}
+	.layui-table{ font-family: "Microsoft YaHei","Helvetica Neue";}
+	</style>
+    <div class="x-body" style="background-color: #f3f3f3; margin: 0;">
+            <blockquote class="layui-elem-quote">
+                欢迎学院领导审批信息回溯系统！<span class="f-14">v1.0</span> &nbsp;&nbsp;
+            </blockquote>
+        <!--相关统计-->
+        <div class="row">
+        <div class="col-sm-4">
+         <section class="panel">
+                    <div class="panel-heading">审批信息 <span style="position: absolute;
+                        right: 30px;
+                        top: 24px;
+                        font-size: 12px;
+                        color: #999;
+                        font-weight: 400;">审批信息统计</span></div>
+                    <div class="panel-body">
+                        <div class="echarts" id="area" style="height:300px; height:350px"></div>
+                    </div>
+                </section>
+        </div>
+        <div class="col-sm-4">
+         <section class="panel">
+                    <div class="panel-heading">最新教工信息</div>
+                    <div class="panel-body" style="padding-top: 0px;">
+                        <ul class="list-group clear-list m-t">
+                            <li class="list-group-item fist-item"> <span class="float-right"> 09:00 </span> <span class="label label-success">1</span> 周遇好 </li>
+                            <li class="list-group-item"> <span class="float-right"> 10:16 </span> <span class="label label-info">2</span> 赵志明 </li>
+                            <li class="list-group-item"> <span class="float-right"> 08:22 </span> <span class="label label-primary">3</span> 章鑫 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 </span> <span class="label label-warning">4</span> 尹嘉欣 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 </span> <span class="label label-warning">5</span> 许致 </li>
+                            <li class="list-group-item"> <span class="float-right"> 08:22 </span> <span class="label label-warning">6</span> 徐翔宇 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 </span> <span class="label label-warning">7</span> 吴越 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 </span> <span class="label label-warning">8</span> 王璇洋 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 </span> <span class="label label-warning">9</span> 王庆祥 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 </span> <span class="label label-warning">10</span> 王龙 </li>
+                        </ul>
+                    </div>
+                </section>
+        </div>
+            <div class="col-sm-4">
+                <section class="panel">
+                    <div class="panel-heading">最新审批信息</div>
+                    <div class="panel-body" style="padding-top: 0px;">
+                        <ul class="list-group clear-list m-t">
+                            <li class="list-group-item" style="border-top: none !important;"> <span class="float-right"> 09:00 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-danger">1</span> 马钢能控中心CO集中监测系统软件开发 </li>
+                            <li class="list-group-item"> <span class="float-right"> 10:16 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-info">2</span> 户籍电子档案管理系统软件维护 </li>
+                            <li class="list-group-item"> <span class="float-right"> 08:22 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-warning">3</span> 支撑企业参与碳交易工作的综合服务平台开发 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-default">4</span> 基于Hadoop平台的大学生学业预警系统 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 &nbsp;<b style="color: #FF7700">未审批</b></span> <span class="label label-default">5</span> 宠物网络销售系统 </li>
+                            <li class="list-group-item"> <span class="float-right"> 08:22 &nbsp;<b style="color: #FF7700">未审批</b></span> <span class="label label-default">6</span> 基于Hadoop的上网日志分析系统 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 &nbsp;<b style="color: #FF7700">未审批</b></span> <span class="label label-default">7</span> 基于IPv6的校园路灯节能系统的研究 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-default">8</span> 十七冶科技资源管理信息系统 </li>
+                            <li class="list-group-item"> <span class="float-right"> 11:06 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-default">9</span> 一种高炉炉缸数值模拟与解析系统及其控制方法 </li>
+                            <li class="list-group-item"> <span class="float-right"> 12:00 &nbsp;<b style="color: #D68F49">已审批</b></span> <span class="label label-default">10</span> 汽车零部件装备数据管理系统研发 </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+        <script src="lib/layui/layui.js" charset="utf-8"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/echarts.min.js"></script>
+
+    <script type="text/javascript">
+        // 指定图表的配置项和数据
+       var myChart = echarts.init(document.getElementById('area'));
+
+        // 指定图表的配置项和数据
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: "rgba(255, 255, 255, 1)",
+            textStyle:{
+                color: '#999'
+            },
+            extraCssText:'box-shadow: 0 0 5px #ccc',
+            formatter: "{a} <br/>{b} : {c} ({d}%)",
+        },
+        itemStyle: {
+            normal: {
+                //好，这里就是重头戏了，定义一个list，然后根据所以取得不同的值，这样就实现了，
+                color: function(params) {
+                    // build a color map as your need.
+                    var colorList = [
+                        "#FA9660", "#F8917E", "#FFD586", "#D68F49", "#DADADA",
+                    ];
+                    return colorList[params.dataIndex]
+                },
+                //以下为是否显示，显示位置和显示格式的设置了
+                label: {
+                    show: true,
+                    position: 'top',
+                    formatter: '{b}\n{c}'
+                }
+            }
+        },
+        label: {
+            normal: {
+                show: true,
+                formatter: "{c} ",
+                textStyle: {
+                    fontSize: this.standSize / 150,
+                    color: "#999"
+                },
+            },
+        },
+        legend: {
+            icon: 'circle',
+            orient: 'vertical',
+            itemWidth: 8,
+            itemHeight: 8,
+            right:0,
+            bottom:0,
+            data: ['资金类', '知识产权类', '科研项目有类', '教改项目类', '报奖申请类']
+        },
+        series: [{
+            name: '审批信息数量',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '40%'],
+            data: [
+                { value: 33, name: '资金类' },
+                { value: 46, name: '知识产权类' },
+                { value: 27, name: '科研项目有类' },
+                { value: 14, name: '教改项目类' },
+                { value: 13, name: '报奖申请类' }
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }]
+    };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        myChart.currentIndex = -1;
+        setInterval(function () {
+            var dataLen = option.series[0].data.length;
+            /*console.log(dataLen);*/
+            // 取消之前高亮的图形
+            myChart.dispatchAction({
+                type: 'downplay',
+                seriesIndex: 0,
+                dataIndex: myChart.currentIndex
+            });
+            myChart.currentIndex = (myChart.currentIndex + 1) % dataLen;
+            // 高亮当前图形
+            myChart.dispatchAction({
+                type: 'highlight',
+                seriesIndex: 0,
+                dataIndex: myChart.currentIndex
+            });
+        }, 2000);
+
+        // 使用刚指定的配置项和数据显示图表。
+        /*myChart.setOption(option);*/
+        window.addEventListener("resize",function(){
+            myChart.resize();
+        });
+    </script>
+        </div>
+    </body>
+</html>
